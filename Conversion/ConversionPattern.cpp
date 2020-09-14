@@ -24,10 +24,6 @@ public:
 	}
 };
 
-class CelciusToFarenhiet : public Conversion<double,double>{
-public:
-
-}
 
 
 int main() {
@@ -36,13 +32,18 @@ int main() {
 	Conversion<double,double>* ptr = new MeterToKiloMeter;
 	double data = 10.2;
 	double out = ptr->convertor(data);
-	cout<<out<<"\n";
+	
+	cout<<"Conversion of meter to kilometer\n";
+	cout<<data<<"m --> ";
+	cout<<out<<"km"<<"\n";
 	
 	
 	Conversion<char,int> * ptr2 = new CharToInt;
 	char data2 = 'a';
 	
 	int out2 = ptr2->convertor(data2);
+	cout<<"Conversion of char to ascii value\n";
+	cout<<"'a' --> ";
 	cout<<out2<<"\n";
 	
 	
